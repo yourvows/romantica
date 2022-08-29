@@ -1,19 +1,26 @@
+* {
+    margin: 0 auto;
+}
+
+body {
+    display: grid;
+}
+
 .pass {
     display: flex;
-    justify-content: center;
-    margin: auto;
+
+
 }
 
-.content__img {
-    width: 300px;
-    height: 300px;
-}
-
-.content{
+input {
+    width: 140px;
+    height: 30px;
     text-align: center;
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-top:50px;
+    font-family: 'Playfair Display', sans-serif;
+    background-color: pink;
+    border: solid;
+    border-color:rgb(244, 184, 194) ;
+    border-radius: 15px;
+    text-transform: uppercase;
+    font-weight: 700;
 }

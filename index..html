@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="кг">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
@@ -7,12 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
     <link rel="stylesheet" href="./style.css">
-    <title>hpb</title>
+    <title>LETTER</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,800;1,800&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <div id="app">
-        <div class="pass"><input type="text" v-model="password" label="few" placeholder="дата рождения">
+        <div class="pass"><input type="text" v-model="password" label="few" placeholder="PASSWORD">
             <button @click="submit">Отправить</button>
         </div>
         <div v-if="isCorrect">
@@ -22,7 +27,7 @@
             </div>
         </div>
     </div>
-    <script>
+    <!-- <script>
         var app = new Vue({
             el: '#app',
             data: {
@@ -39,7 +44,7 @@
                 }
             }
         })
-    </script>
+    </script> -->
 </body>
 
 </html>

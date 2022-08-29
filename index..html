@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="кг">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>hpb</title>
+</head>
+
+<body>
+    <div id="app">
+        <div class="pass"><input type="text" v-model="password" label="few" placeholder="дата рождения">
+            <button @click="submit">Отправить</button>
+        </div>
+        <div v-if="isCorrect">
+            <div class="content">
+                <a href="pornohub.com"> go </a>
+                <img class="content__img" src="./photo_2022-07-26_13-22-02.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                password: '',
+                isCorrect: false,
+                passwordValue: '06.05.2005'
+            },
+            methods: {
+                submit() {
+                    console.log('fewfwe');
+                    if (this.password == this.passwordValue) {
+                        this.isCorrect = true
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

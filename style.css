@@ -1,0 +1,19 @@
+.pass {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+.content__img {
+    width: 300px;
+    height: 300px;
+}
+
+.content{
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top:50px;
+}

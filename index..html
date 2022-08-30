@@ -10,24 +10,31 @@
     <title>LETTER</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,800;1,800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div id="app">
-        <div class="pass"><input type="text" v-model="password" label="few" placeholder="PASSWORD">
-            <button @click="submit">Отправить</button>
+    <div id="app" class="app">
+        <div class="pass">
+            <div class="input__pass">
+                <input type="text" v-model="password" label="few" placeholder="дата рождения">
+                <button @click="submit">Отправить</button>
+            </div>
         </div>
         <div v-if="isCorrect">
             <div class="content">
-                <a href="pornohub.com"> go </a>
-                <img class="content__img" src="./photo_2022-07-26_13-22-02.jpg" alt="">
+                
+                <a class="link" href="pornohub.com"> go </a>
+                <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem vitae, ut odit quia hic
+                    voluptates delectus ipsa. Iure, ratione. Maiores exercitationem reiciendis odit enim alias
+                    sapiente in praesentium fugiat quibusdam perferendis cumque officiis iste aspernatur quia
+                    molestiae est deserunt excepturi, dolores temporibus earum delectus quasi. Cum voluptas rerum
+                    aliquid harum.</h2>
             </div>
         </div>
     </div>
-    <!-- <script>
+
+    <script>
         var app = new Vue({
             el: '#app',
             data: {
@@ -44,7 +51,7 @@
                 }
             }
         })
-    </script> -->
+    </script>
 </body>
 
 </html>

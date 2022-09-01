@@ -14,6 +14,16 @@ button{
     cursor: pointer;
     height: 30px;
     border-radius:10px;
+    color: white;
+    background: #cd1551;
+    transition: .5s ease;
+    border-radius: 10px;
+}
+button:hover{
+    background: transparent;
+    border: 2px solid #cd1551;
+    box-shadow: 0 0 10px 0 #cd1551 inset;
+    border-radius: 10px;
 }
 
 input {
@@ -38,12 +48,16 @@ input {
 }
 
 .link{
+    content: url(./img/img.JPG);
    text-decoration: none;
    color: white;
+
 }
 h2{
     color: white;
     width: fit-content;
+    text-align: center;
+    font-weight: 400;
 }
 .pass{
 

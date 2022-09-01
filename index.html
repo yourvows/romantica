@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
     <link rel="stylesheet" href="./style.css">
     <title>LETTER</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./media.css">
 </head>
 
 <body>
@@ -18,40 +19,47 @@
         <div class="pass">
             <div class="input__pass">
                 <input type="text" v-model="password" label="few" placeholder="дата рождения">
-                <button @click="submit">Отправить</button>
+                <button class="send" @click="submit">Отправить</button>
             </div>
         </div>
         <div v-if="isCorrect">
             <div class="content">
-                
-                <a class="link" href="#!"> go </a>
-                <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem vitae, ut odit quia hic
-                    voluptates delectus ipsa. Iure, ratione. Maiores exercitationem reiciendis odit enim alias
-                    sapiente in praesentium fugiat quibusdam perferendis cumque officiis iste aspernatur quia
-                    molestiae est deserunt excepturi, dolores temporibus earum delectus quasi. Cum voluptas rerum
-                    aliquid harum.</h2>
+                <div class="cont__rep">
+                    <div class="img__cont">
+                        <img src="./img/img.JPG" alt="">
+                        <p>С ТВОИМ ДНЕМ</p>
+                    </div>
+                    <h2 class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem vitae, ut odit
+                        quia hic
+                        voluptates delectus ipsa. Iure, ratione. Maiores exercitationem reiciendis odit enim alias
+                        sapiente in praesentium fugiat quibusdam perferendis cumque officiis iste aspernatur quia
+                        molestiae est deserunt excepturi, dolores temporibus earum delectus quasi. Cum voluptas rerum
+                        aliquid harum.</h2>
+                    <div class="loader">
+                        <div></div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
 
-    <script>
-        var app = new Vue({
-            el: '#app',
-            data: {
-                password: '',
-                isCorrect: false,
-                passwordValue: '06.05.2005'
-            },
-            methods: {
-                submit() {
-                    console.log('fewfwe');
-                    if (this.password == this.passwordValue) {
-                        this.isCorrect = true
+        <script>
+            var app = new Vue({
+                el: '#app',
+                data: {
+                    password: '',
+                    isCorrect: false,
+                    passwordValue: '06.05.2005'
+                },
+                methods: {
+                    submit() {
+                        console.log('fewfwe');
+                        if (this.password == this.passwordValue) {
+                            this.isCorrect = true
+                        }
                     }
                 }
-            }
-        })
-    </script>
+            })
+        </script>
 </body>
 
 </html>

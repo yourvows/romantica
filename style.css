@@ -1,25 +1,28 @@
 * {
     margin: 0 auto;
 }
+
 /* body */
 body {
-    background:url(./img/bg.JPG) ;
+    background: url(./img/bg.JPG);
     width: fit-content;
     background-size: 100%;
     font-family: 'Cinzel', serif;
-    
+
 }
+
 /* input style */
-button{
+.send {
     cursor: pointer;
     height: 30px;
-    border-radius:10px;
+    border-radius: 10px;
     color: white;
     background: #cd1551;
     transition: .5s ease;
     border-radius: 10px;
 }
-button:hover{
+
+.send:hover {
     background: transparent;
     border: 2px solid #cd1551;
     box-shadow: 0 0 10px 0 #cd1551 inset;
@@ -32,34 +35,110 @@ input {
     width: 140px;
     height: 30px;
     text-align: center;
-    border-color:#cd1551 ;
+    border-color: #cd1551;
     border-radius: 15px;
     border-width: 5px;
 }
-.pass{
+
+.pass {
     display: flex;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
+
 /*  */
-.content{
-   display: flex;
-   flex-wrap: wrap;
-   margin: 0 50px;
+.cont__rep {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 50px;
+}
+.img__cont{
+    display: flex;
+}
+img {
+    width: 368px;
+    height: 423px;
+    border-radius: 38px;
+    background: #cd1551;
+    box-shadow: -13px 13px 38px #a81142,
+        13px -13px 38px #f21960;
+
 }
 
-.link{
-    content: url(./img/img.JPG);
-   text-decoration: none;
-   color: white;
-
-}
-h2{
+h2 {
     color: white;
     width: fit-content;
     text-align: center;
     font-weight: 400;
 }
-.pass{
 
+.pass {}
+
+/* loader */
+.loader {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    transform: rotate(45deg);
+    transform-origin: 40px 40px;
 }
+
+.loader div {
+    top: 32px;
+    left: 32px;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    background: red;
+    animation: loader45 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.loader div:after,
+.loader div:before {
+    content: " ";
+    position: absolute;
+    display: block;
+    width: 32px;
+    height: 32px;
+    background: red;
+}
+
+.loader div:before {
+    left: -24px;
+    border-radius: 50% 0 0 50%;
+}
+
+.loader div:after {
+    top: -24px;
+    border-radius: 50% 50% 0 0;
+}
+
+@keyframes loader45 {
+    0% {
+        transform: scale(0.95);
+    }
+
+    5% {
+        transform: scale(1.1);
+    }
+
+    39% {
+        transform: scale(0.85);
+    }
+
+    45% {
+        transform: scale(1);
+    }
+
+    60% {
+        transform: scale(0.95);
+    }
+
+    100% {
+        transform: scale(0.9);
+    }
+}
+
+/* button */
 

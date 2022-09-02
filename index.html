@@ -17,10 +17,17 @@
 <body>
     <div id="app" class="app">
         <div class="pass">
-            <div class="input__pass">
+            <div class="input__pass" v-if="!intervalFinished && !isCorrect">
                 <input type="text" v-on:keyup.enter="submit" v-model="password" label="few" placeholder="дата рождения">
-                <button class="send"  @click="submit">Отправить</button>
+                <button class="send" @click="submit">Отправить</button>
             </div>
+        </div>
+        <div v-if="intervalFinished">
+            <video autoplay style="width:500px" height="240" controls>
+          <source  src="./img/IMG_3713.MOV" type="video/mp4">
+           <source   src="./img/IMG_3713.MOV" type="video/ogg">
+        Your browser does not support the video tag.
+         </video>
         </div>
         <div v-if="isCorrect">
             <div class="content">
@@ -29,38 +36,51 @@
                         <img src="./img/img.JPG" alt="">
                         <p>С ТВОИМ ДНЕМ</p>
                     </div>
-                    <h2 class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem vitae, ut odit
-                        quia hic
-                        voluptates delectus ipsa. Iure, ratione. Maiores exercitationem reiciendis odit enim alias
-                        sapiente in praesentium fugiat quibusdam perferendis cumque officiis iste aspernatur quia
-                        molestiae est deserunt excepturi, dolores temporibus earum delectus quasi. Cum voluptas rerum
-                        aliquid harum.</h2>
+                    <h2 class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem vitae, ut odit quia hic voluptates delectus ipsa. Iure, ratione. Maiores exercitationem reiciendis odit enim alias sapiente in praesentium fugiat quibusdam perferendis
+                        cumque officiis iste aspernatur quia molestiae est deserunt excepturi, dolores temporibus earum delectus quasi. Cum voluptas rerum aliquid harum.</h2>
                     <div class="loader">
                         <div></div>
                     </div>
                 </div>
             </div>
         </div>
-</div>
-        <script>
+    </div>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                password: '',
+                isCorrect: false,
+                passwordValue: '06.05.2005',
+                intervalFinished: false,
+            },
+            methods: {
+                submit() {
 
-            var app = new Vue({
-                el: '#app',
-                data: {
-                    password: '',
-                    isCorrect: false,
-                    passwordValue: '06.05.2005'
-                },
-                methods: {
-                    submit() {
-                        console.log('fewfwe');
-                        if (this.password == this.passwordValue) {
+                    if (this.password == this.passwordValue) {
+                        this.intervalFinished = true;
+
+                        setTimeout(() => {
+                            this.intervalFinished = false;
                             this.isCorrect = true
-                        }
+                        }, 6000);
                     }
                 }
-            })
-        </script>
+            },
+            mounted() {
+
+            },
+        })
+    </script>
+    <style>
+        .visible {
+            display: block;
+        }
+        
+        .invisible {
+            display: none;
+        }
+    </style>
 </body>
 
 </html>

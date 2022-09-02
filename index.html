@@ -18,8 +18,8 @@
     <div id="app" class="app">
         <div class="pass">
             <div class="input__pass">
-                <input type="text" v-model="password" label="few" placeholder="дата рождения">
-                <button class="send" @click="submit">Отправить</button>
+                <input type="text" v-on:keyup.enter="submit" v-model="password" label="few" placeholder="дата рождения">
+                <button class="send"  @click="submit">Отправить</button>
             </div>
         </div>
         <div v-if="isCorrect">
@@ -41,8 +41,9 @@
                 </div>
             </div>
         </div>
-
+</div>
         <script>
+
             var app = new Vue({
                 el: '#app',
                 data: {

@@ -5,7 +5,10 @@
 /* body */
 body {
     background: url(./img/bg.JPG);
+    background-size: cover;
+    background-repeat:no-repeat;
     width: fit-content;
+    height: 100vh;            
     background-size: 100%;
     font-family: 'Cinzel', serif;
 
@@ -54,8 +57,16 @@ input {
 }
 .img__cont{
     display: flex;
-    justify-content:center
-    ;
+    justify-content:center;
+    flex-direction: column-reverse;
+    
+}
+p{
+    margin:20px auto;
+    color: white;
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 40px;
 }
 img {
     width: 368px;

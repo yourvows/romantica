@@ -5,11 +5,14 @@
 /* body */
 body {
     background: url(./img/bg.JPG);
-    background-size: cover;
-    background-repeat:no-repeat;
-    width: fit-content;
-    height: 100vh;            
-    background-size: 100%;
+    background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 100vh;
     font-family: 'Cinzel', serif;
 
 }

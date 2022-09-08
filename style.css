@@ -178,3 +178,12 @@ h2 {
 audio{
     display: none;
 }
+/* sms */
+.sms {
+    padding: 20px;
+}
+.sms__btn{
+    background: transparent;
+    border: none !important;
+    font-size: 0;
+}

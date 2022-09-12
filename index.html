@@ -9,26 +9,19 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
     <link rel="stylesheet" href="./style.css">
     <title>LETTER</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./media.css">
+    <link rel="stylesheet" href="./font.css">
 </head>
 
 <body>
     <div id="app" class="app">
         <div class="pass">
-            <div class="input__pass" v-if="!intervalFinished && !isCorrect">
-                <input type="text" v-on:keyup.enter="submit" v-model="password" label="few" placeholder="дата рождения">
+            <div class="input__pass" v-if=" !isCorrect">
+                <input inputmode="tel" type="text" v-on:keyup.enter="submit" v-model="password" label="few" placeholder="дата рождения">
                 <button class="send" @click="submit">Отправить</button>
             </div>
         </div>
-        <div class="video" v-if="intervalFinished">
-            <video autoplay="1" style="width:390px" height="100%" controls>
-                <source src="./img/IMG_3713.MOV" type="video/mp4">
-                <source src="./img/IMG_3713.MOV" type="video/ogg">
-            </video>
-        </div>
+        
         <div v-if="isCorrect">
             <div class="content">
                 <div style="display:block">
@@ -46,16 +39,22 @@
                             cumque officiis iste aspernatur quia molestiae est deserunt excepturi, dolores temporibus
                             earum
                             delectus quasi. Cum voluptas rerum aliquid harum.</h2>
-                        <a href="sms:+998935353200;?&body=">
+                            <div class="video" v-if="isCorrect">
+                                <video  style="width:390px" height="100%" controls>
+                                    <source src="./img/IMG_3713.MOV" type="video/mp4">
+                                    <source src="./img/IMG_3713.MOV" type="video/ogg">
+                                </video>
+                            </div>
+                        <a href="sms:+998935353200;?&body=yes">
                             <div class="loader">
                                 <div></div>
                             </div>
                         </a>
                     </div>
-                    <audio controls autoplay muted>
+                    <!-- <audio controls autoplay muted>
                     <source src="./img/music.mp3" type="audio/mpeg">
                     Your browser does not support the audio element.
-                </audio>
+                </audio> -->
                 </div>
             </div>
         </div>
@@ -66,19 +65,16 @@
             data: {
                 password: '',
                 isCorrect: false,
-                passwordValue: '06.05.2005',
+                passwordValue: '0',
                 intervalFinished: false,
             },
             methods: {
                 submit() {
 
                     if (this.password == this.passwordValue) {
-                        this.intervalFinished = true;
+                        this.isCorrect = true
 
-                        setTimeout(() => {
-                            this.intervalFinished = false;
-                            this.isCorrect = true
-                        }, 6000);
+                       
                     }
                 }
             },

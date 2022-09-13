@@ -67,11 +67,14 @@ input {
 
 }
 
-p {
-    margin: 20px auto;
+.agree {
+    font-weight: 500;
+    font-size: 27px;
+    font-family: 'SF Pro Display';
     color: white;
-    font-weight: 700;
-    font-size: 40px;
+    margin-top: 5px;
+    margin-left: 9px;
+    margin-right: 9px;
 }
 
 
@@ -90,8 +93,9 @@ h2 {
     margin: 15px;
     color: white;
     width: fit-content;
-    text-align: center;
+    font-size: 20px;
     font-weight: 400;
+    text-align: justify;
 }
 
 /* loader */
@@ -170,6 +174,10 @@ h2 {
 
 .title_text {
     font-family: 'SF Pro Display';
+    margin: 20px auto;
+    color: white;
+    font-weight: 700;
+    font-size: 30px;
 }
 
 video {

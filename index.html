@@ -24,9 +24,10 @@
         
         <div v-if="isCorrect">
             <div class="content">
-                <div>
+                <div style="display: block">
+                    <img class="title__img" src="./img/bg3.png" alt="">
                     <div class="cont__rep">
-                        <img class="title__img" src="./img/bg3.png" alt="">
+
                         <div class="img__cont">
                             <img src="./img/special.jpg" alt="">
                         </div>
@@ -36,6 +37,12 @@
 
                             С любовью,
                             Иброхим</h2>
+                        <div class="parent">
+                            <img class="just__bg" src="img/puzle.jpg" alt="">
+                            <img class="just__img" src="img/image2.jpg" alt="">
+                            <img class="just__img" src="img/image3.jpg" alt="">
+                            <img class="just__img" src="img/image4.jpg" alt="">
+                        </div>
                             <div class="video" v-if="isCorrect">
                                 <video controls>
                                     <source src="./img/IMG_3713.MOV" type="video/mp4">
@@ -68,7 +75,7 @@
             methods: {
                 submit() {
 
-                    if (this.password === 'Mufassal' || 'mufassal' || 'муфассал' || 'Муфассал') {
+                    if (this.password == 'Mufassal' || this.password =='mufassal' || this.password =='муфассал' || this.password =='Муфассал') {
                         this.isCorrect = true
                        console.log('correct');
                     }

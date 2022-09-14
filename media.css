@@ -7,5 +7,22 @@
     height: 237px;
    
 }
-  
+  .parent {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 9px;
+  }
+  .just__img{
+    height: 300px;
+    width: 300px;
+    border-radius: 15px;
+    /*object-fit: contain;*/
+  }
+  .just__bg{
+    height: 380px;
+    width: 300px;
+    border-radius: 15px;
+  }
 }

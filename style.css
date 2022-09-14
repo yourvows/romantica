@@ -17,7 +17,6 @@ body {
 .content {
     display: flex;
     flex-direction: column;
-    justify-content: center;
 }
 
 /* input style */
@@ -78,6 +77,7 @@ input {
 }
 
 img {
+    width: 338px;
     height: 423px;
     border-radius: 38px;
     background: #FFAEBC;
@@ -176,6 +176,7 @@ h2 {
 }
 
 video {
+    margin-top: 10px;
     width: 345px;
     height: 100%;
     border-radius: 38px;
@@ -186,4 +187,11 @@ video {
 
 .invisible {
     display: none;
+}
+.parent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0;
+    grid-row-gap: 0;
 }

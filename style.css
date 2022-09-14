@@ -10,7 +10,7 @@ body {
     background-attachment: fixed;
     background-size: cover;
     min-height: 100vh;
-    font-family: 'SF Pro Display';
+    font-family: 'SF Pro Display', serif;
 
 }
 
@@ -70,23 +70,23 @@ input {
 .agree {
     font-weight: 500;
     font-size: 27px;
-    font-family: 'SF Pro Display';
     color: white;
     margin-top: 5px;
     margin-left: 9px;
     margin-right: 9px;
+    text-align: center;
+}
+.content div{
+    justify-content: center;
 }
 
 
-
 img {
-    width: 368px;
     height: 423px;
     border-radius: 38px;
     background: #FFAEBC;
     box-shadow: -13px 13px 38px #FFAEBC,
         13px -13px 38px #FFAEBC;
-
 }
 
 h2 {
@@ -173,7 +173,6 @@ h2 {
 }
 
 .title_text {
-    font-family: 'SF Pro Display';
     margin: 20px auto;
     color: white;
     font-weight: 700;
@@ -184,4 +183,11 @@ video {
     width: 345px;
     height: 100%;
     border-radius: 38px;
+}
+.visible {
+    display: block;
+}
+
+.invisible {
+    display: none;
 }

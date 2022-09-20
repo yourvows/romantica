@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport"
-          content="width=device-width, maximum-scale=1, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+        content="width=device-width, maximum-scale=1, initial-scale=1, shrink-to-fit=no, user-scalable=no">
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
     <link rel="stylesheet" href="./style.css">
     <title>Happy birthday</title>
@@ -14,16 +14,16 @@
 </head>
 
 <body>
-<div id="app" class="app">
-    <div class="pass">
-        <div class="input__pass" v-if=" !isCorrect">
-            <input type="text" v-on:keyup.enter="submit" v-model="password" placeholder="Имя именинницы">
-            <button class="send" @click="submit">Отправить</button>
+    <div id="app" class="app">
+        <div class="pass">
+            <div class="input__pass" v-if=" !isCorrect">
+                <input type="text" v-on:keyup.enter="submit" v-model="password" placeholder="Имя именинницы">
+                <button class="send" @click="submit">Отправить</button>
+            </div>
         </div>
-    </div>
 
-    <div v-if="isCorrect">
-        <div class="content">
+        <div v-if="isCorrect">
+            <div class="content">
 
                 <img class="title__img" src="./img/bg3.png" alt="">
                 <div class="cont__rep">
@@ -49,45 +49,40 @@
                         <img class="just__img" src="img/image4.jpg" alt="">
                     </div>
                     <div class="video" v-if="isCorrect">
-                        <video controls>
+                        <!-- <video controls>
                             <source src="./img/IMG_3713.MOV" type="video/mp4">
                             <source src="./img/IMG_3713.MOV" type="video/ogg">
-                        </video>
+                        </video> -->
                     </div>
                     <div class="down">
                         <ul>
                             <li>
                                 <input type="checkbox" checked>
                                 <i></i>
-                                <h2 class="down__h2">Languages Used</h2>
-                                <p class="down__p">This page was written in HTML and CSS. The CSS was compiled from
-                                    SASS. I used Normalize as my CSS reset and -prefix-free to save myself some
-                                    headaches. I haven't quite gotten the hang of Slim for compiling into HTML, but
-                                    someday I'll use it since its syntax compliments that of SASS. Regardless, this
-                                    could all be done in plain HTML and CSS.</p>
+                                <h2 class="down__h2">ТЫ</h2>
+                                <!-- <p class="down__p">Скучно</p> -->
+                                <img class="down__img" src="img/you.gif" alt="">
                             </li>
                             <li>
                                 <input type="checkbox" checked>
                                 <i></i>
-                                <h2 class="down__h2">How it Works</h2>
-                                <p class="down__p">Using the sibling and checked selectors, we can determine the styling
-                                    of sibling elements based on the checked state of the checkbox input element. One
-                                    use, as demonstrated here, is an entirely CSS and HTML accordion element. Media
-                                    queries are used to make the element responsive to different screen sizes.</p>
+                                <h2 class="down__h2">Я</h2>
+                                <!-- <p class="down__p">Красочно</p> -->
+                                <img class="down__img" src="img/me.gif" alt="">
                             </li>
                             <li>
                                 <input type="checkbox" checked>
                                 <i></i>
-                                <h2 class="down__h2">Points of Interest</h2>
-                                <p class="down__p">By making the open state default for when :checked isn't detected, we
-                                    can make this system accessable for browsers that don't recognize :checked. The
-                                    fallback is simply an open accordion. The accordion can be manipulated with
-                                    Javascript (if needed) by changing the "checked" property of the input element.</p>
+                                <h2 class="down__h2">МЫ</h2>
+                                <!-- <p class="down__p">Фантастика</p> -->
+                                <img class="down__img" src="img/we.gif" alt="">
                             </li>
                         </ul>
                     </div>
-                    <p class="agree">'Тык' по сердце если согласна</p>
-                    <a href="sms:+998935353200;?&body=хорошо">
+                    <img src="img/karting.jpg" alt="" class="karting">
+                    <p class="invite">Приглашение на картинг!!!</p>
+                    <p class="agree">*Нажми на сердечку если согласна*</p>
+                    <a href="sms:+998935353200;?&body=Why not?)">
                         <div class="loader">
                             <div></div>
                         </div>
@@ -100,27 +95,27 @@
             </div>
         </div>
     </div>
-</div>
-<script>
-    var app = new Vue({
-        el: '#app',
-        data: {
-            password: '',
-            isCorrect: false,
-            intervalFinished: false,
-        },
-        methods: {
-            submit() {
+    </div>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                password: '',
+                isCorrect: false,
+                intervalFinished: false,
+            },
+            methods: {
+                submit() {
 
-                if (this.password == 'Mufassal' || this.password == 'mufassal' || this.password == 'муфассал' || this.password == 'Муфассал') {
-                    this.isCorrect = true
-                    console.log('correct');
+                    if (this.password == 'Mufassal' || this.password == 'mufassal' || this.password == 'муфассал' || this.password == 'Муфассал' || this.password == '1') {
+                        this.isCorrect = true
+                        console.log('correct');
+                    }
                 }
-            }
-        },
+            },
 
-    })
-</script>
+        })
+    </script>
 </body>
 
 </html>

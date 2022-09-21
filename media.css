@@ -28,7 +28,8 @@
         width: 300px;
         border-radius: 15px;
     }
-    .text{
+
+    .text {
         margin: 15px;
         color: white;
         width: fit-content;
@@ -46,5 +47,9 @@
         margin: 0;
         left: 0;
     }
-}
 
+    .down__img {
+        max-width: 330px;
+        height: 301px;
+    }
+}

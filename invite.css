@@ -22,10 +22,19 @@ body {
   background: #FFAEBC;
   margin-top: 15px;
 }
+.inviter{
+  display: flex;
+  flex-direction: column;
+  width: 338px;
+  border-radius: 38px;
+  background: #FFAEBC;
+  margin-top: 15px;
+}
 
 .invite__p {
   margin-top: 5px;
   font-size: 25px;
+  text-align: center;
 }
 
 .agree {
@@ -44,10 +53,73 @@ body {
 }
 
 /* button */
-button{
+button {
+  position: absolute;
   display: block;
   position: absolute;
 }
+
+.button__space {
+
+  margin-top: 85px;
+  width: 338px;
+  height: 423px;
+  position: relative;
+}
+
+.button__space {
+  display: block;
+  position: relative;
+}
+
+.bg {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  margin-top: 120px;
+  background: url(img/space.png);
+  width: 300px;
+  height: 250px;
+}
+.back__link{
+  display: flex;
+  align-items: flex-end;
+}
+
+.back {
+  border: 1px;
+  height: 2rem;
+  width: 8rem;
+  border-radius: 15px;
+  margin: 15px auto;
+}
+
+.yes {
+  border-radius: 15px;
+  height: 2rem;
+  width: 4rem;
+  transition: all .5s;
+  font-family: 'SF Pro Display', serif;
+  left: 60px;
+  z-index: 1;
+  position: absolute;
+}
+
+.no {
+  border-radius: 15px;
+  height: 2rem;
+  width: 4rem;
+  font-family: 'SF Pro Display', serif;
+  margin-left: 190px;
+}
+
+.mp3 {
+  display: none;
+}
+
+
+
 
 /* loader */
 .loader {

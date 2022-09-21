@@ -12,25 +12,30 @@
 
 <body>
   <div class="invite">
-    <img src="img/karting.jpg" alt="" class="karting">
-    <p class="invite__p">Приглашение на картинг!!!</p>
-    <h1 class="question">Пойдем?</h1>
-    <div class="button__run">
-      <button>abc</button>
+    <img src="img/walk.WEBP" alt="" class="karting">
+    <p class="invite__p">Давай проведем этот день вместе?</p>
+    <h1 class="question">Ладно?</h1>
+  </div>
+  <main class="button__run">
+    <div class="bg"><input class="yes" type="button" value="Нет"></input>
+      <input id="noid"  class="no" type="button" value="Да"></input>
     </div>
-    <p class="agree">*Нажми на сердечку если согласна*</p>
+
+  </main>
+  <div class="inviter">
     <a href="sms:+998935353200;?&body=Why not?)">
       <div class="loader">
         <div></div>
       </div>
     </a>
-    <audio controls preload="auto">
-      <source src="./img/music.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
+   <div class="back__link"> <a  href="index.html"><input class="back" type="button" value="<<Назад"></a></div>
   </div>
-
-  <script src="app.js"></script>
+  <audio class="mp3" id="audio" controls preload="auto">
+    <source src="./img/bgmusic.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <script src="app.js">
+  </script>
 </body>
 
 </html>

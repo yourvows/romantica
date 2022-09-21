@@ -16,6 +16,10 @@ body {
 }
 
 /* input style */
+.next{
+    
+    margin-bottom: 10px;
+}
 .send {
     cursor: pointer;
     height: 30px;

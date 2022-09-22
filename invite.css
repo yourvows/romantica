@@ -99,7 +99,7 @@ button {
   border-radius: 15px;
   height: 2rem;
   width: 4rem;
-  transition: all .5s;
+  transition: all .5s ease-out;
   font-family: 'SF Pro Display', serif;
   left: 60px;
   z-index: 1;

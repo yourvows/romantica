@@ -5,9 +5,24 @@ function change() {
   
   var i = Math.floor(Math.random() * 100) + 1;
   var j = Math.floor(Math.random() * 500) + 1;
-  var p = j - 50;
+  // var p = j - 50;
+  
   b.style.left = i + "px";
-  b.style.top = p + "px";
+  b.style.top = j + "px";
+  // b.style.top = p + "px";
+
+  if(i>200){
+    b.style.left = 150 + "px";
+  }
+  else{
+    b.style.left = i + "px";
+  }
+  if(j>260){
+    b.style.top = 155 + "px";
+  }
+  else{
+    b.style.top = j + "px";
+  }
   console.log(i);
   console.log(j);
 }

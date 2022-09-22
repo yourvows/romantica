@@ -10,8 +10,11 @@
   <link rel="stylesheet" href="font.css">
   <title>Invite</title>
 </head>
-
 <body>
+  <audio class="mp3" id="audio" controls preload="auto">
+    <source src="./img/bgmusic.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
   <div class="invite">
     <img src="img/walk.WEBP" alt="" class="karting">
     <p class="invite__p">Давай проведем этот день вместе?</p>
@@ -21,7 +24,6 @@
     <div class="bg"><input class="yes" type="button" value="Нет"></input>
       <input id="noid"  class="no" type="button" value="Да"></input>
     </div>
-
   </main>
   <div class="inviter">
     <a href="sms:+998935353200;?&body=Мой ответ:Да)">
@@ -31,10 +33,7 @@
     </a>
    <div class="back__link"> <a  href="index.html"><input class="back" type="button" value="<<Назад"></a></div>
   </div>
-  <audio class="mp3" id="audio" controls preload="auto">
-    <source src="./img/bgmusic.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
+  
   <script src="app.js">
   </script>
 </body>

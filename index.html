@@ -79,34 +79,34 @@
                             </li>
                         </ul>
 
-                        <div class="back__link"> <a  href="invite.html"><input class="next" type="button" value="Листай дальше>>"></a></div>
+                        <div class="back__link"><button class="next"><a class="none" href="invite.html">ПЕРЕЙТИ ДАЛЕЕ</a></button></div>
                     </div>
-                <!-- <audio controls autoplay muted>
+                    <!-- <audio controls autoplay muted>
                 <source src="./img/music.mp3" type="audio/mpeg">
                 Your browser does not support the audio element.
             </audio> -->
+                </div>
             </div>
         </div>
-    </div>
-    <script>
-        var app = new Vue({
-            el: '#app',
-            data: {
-                password: '',
-                isCorrect: false,
-                intervalFinished: false,
-            },
-            methods: {
-                submit() {
-                    if (this.password == 'Mufassal' || this.password == 'mufassal' || this.password == 'муфассал' || this.password == 'Муфассал' || this.password == '1') {
-                        this.isCorrect = true
-                        console.log('correct');
+        <script>
+            var app = new Vue({
+                el: '#app',
+                data: {
+                    password: '',
+                    isCorrect: false,
+                    intervalFinished: false,
+                },
+                methods: {
+                    submit() {
+                        if (this.password == 'Mufassal' || this.password == 'mufassal' || this.password == 'муфассал' || this.password == 'Муфассал' || this.password == '1') {
+                            this.isCorrect = true
+                            console.log('correct');
+                        }
                     }
-                }
-            },
+                },
 
-        })
-    </script>
+            })
+        </script>
 </body>
 
 </html>

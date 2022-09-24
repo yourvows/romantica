@@ -17,96 +17,101 @@
     <div id="app" class="app">
         <div class="pass">
             <div class="input__pass" v-if=" !isCorrect">
-                <input type="text" v-on:keyup.enter="submit" v-model="password" placeholder="Имя именинницы">
-                <button class="send" @click="submit">Отправить</button>
+                <div class="add"><input required="" v-on:keyup.enter="submit" v-model="password" type="text" name="text"
+                        autocomplete="off" class="input">
+                    <label class="user-label">Name</label>
+                    <button class="send" @click="submit">Отправить</button>
+                </div>
             </div>
-        </div>
 
-        <div v-if="isCorrect">
-            <div class="content">
+            <div v-if="isCorrect">
+                <div class="content">
 
-                <img class="title__img" src="./img/bg3.png" alt="">
-                <div class="cont__rep">
+                    <img class="title__img" src="./img/bg3.png" alt="">
+                    <div class="cont__rep">
 
-                    <div class="img__cont">
-                        <img src="./img/special.jpg" alt="">
-                    </div>
-                    <p class="title_text">Дорогая Муфассал</p>
-                    <h2 class="text">Поздравляю тебя с днём рождения. Желаю чтобы ты оставалась такой же прекрасной как
-                        сейчас. Была счастлива несмотря ни на что, желаю тебе крепкого здоровья и успехов в жизни. Также
-                        хочу сказать, что ты самый прекрасный человек в моей жизни, которому я хочу давать знании,
-                        отвечать на вопросы и помочь развиться.Ты тот самый человек который может заставить меня
-                        измениться. Я благодарен, что ты существуешь в то же время который я живу.
-                        <br><br>
+                        <div class="img__cont">
+                            <img src="./img/special.jpg" alt="">
+                        </div>
+                        <p class="title_text">Дорогая Муфассал</p>
+                        <h2 class="text">Поздравляю тебя с днём рождения. Желаю чтобы ты оставалась такой же прекрасной
+                            как
+                            сейчас. Была счастлива несмотря ни на что, желаю тебе крепкого здоровья и успехов в жизни.
+                            Также
+                            хочу сказать, что ты самый прекрасный человек в моей жизни, которому я хочу давать знании,
+                            отвечать на вопросы и помочь развиться.Ты тот самый человек который может заставить меня
+                            измениться. Я благодарен, что ты существуешь в то же время который я живу.
+                            <br><br>
 
-                        С любовью,
-                        Иброхим
-                    </h2>
-                    <div class="parent">
-                        <img class="just__bg" src="img/puzle.jpg" alt="">
-                        <img class="just__img" src="img/image2.jpg" alt="">
-                        <img class="just__img" src="img/image3.jpg" alt="">
-                        <img class="just__img" src="img/image4.jpg" alt="">
-                    </div>
-                    <div class="video" v-if="isCorrect">
-                        <!-- <video controls>
+                            С любовью,
+                            Иброхим
+                        </h2>
+                        <div class="parent">
+                            <img class="just__bg" src="img/puzle.jpg" alt="">
+                            <img class="just__img" src="img/image2.jpg" alt="">
+                            <img class="just__img" src="img/image3.jpg" alt="">
+                            <img class="just__img" src="img/image4.jpg" alt="">
+                        </div>
+                        <div class="video" v-if="isCorrect">
+                            <!-- <video controls>
                             <source src="./img/IMG_3713.MOV" type="video/mp4">
                             <source src="./img/IMG_3713.MOV" type="video/ogg">
                         </video> -->
-                    </div>
-                    <div class="down">
-                        <ul>
-                            <li>
-                                <input type="checkbox" checked>
-                                <i></i>
-                                <h2 class="down__h2">ТЫ</h2>
-                                <!-- <p class="down__p">Скучно</p> -->
-                                <img class="down__img" src="img/you.gif" alt="">
-                            </li>
-                            <li>
-                                <input type="checkbox" checked>
-                                <i></i>
-                                <h2 class="down__h2">Я</h2>
-                                <!-- <p class="down__p">Красочно</p> -->
-                                <img class="down__img" src="img/me.gif" alt="">
-                            </li>
-                            <li>
-                                <input type="checkbox" checked>
-                                <i></i>
-                                <h2 class="down__h2">МЫ</h2>
-                                <!-- <p class="down__p">Фантастика</p> -->
-                                <img class="down__img" src="img/we.gif" alt="">
-                            </li>
-                        </ul>
+                        </div>
+                        <div class="down">
+                            <ul>
+                                <li>
+                                    <input type="checkbox" checked>
+                                    <i></i>
+                                    <h2 class="down__h2">ТЫ</h2>
+                                    <!-- <p class="down__p">Скучно</p> -->
+                                    <img class="down__img" src="img/you.gif" alt="">
+                                </li>
+                                <li>
+                                    <input type="checkbox" checked>
+                                    <i></i>
+                                    <h2 class="down__h2">Я</h2>
+                                    <!-- <p class="down__p">Красочно</p> -->
+                                    <img class="down__img" src="img/me.gif" alt="">
+                                </li>
+                                <li>
+                                    <input type="checkbox" checked>
+                                    <i></i>
+                                    <h2 class="down__h2">МЫ</h2>
+                                    <!-- <p class="down__p">Фантастика</p> -->
+                                    <img class="down__img" src="img/we.gif" alt="">
+                                </li>
+                            </ul>
 
-                        <div class="back__link"><button class="next"><a class="none" href="invite.html">ПЕРЕЙТИ ДАЛЕЕ</a></button></div>
-                    </div>
-                    <!-- <audio controls autoplay muted>
+                            <div class="back__link"><a class="none" href="invite.html"><button class="next">ПЕРЕЙТИ
+                                        ДАЛЕЕ</button></a></div>
+                        </div>
+                        <!-- <audio controls autoplay muted>
                 <source src="./img/music.mp3" type="audio/mpeg">
                 Your browser does not support the audio element.
             </audio> -->
+                    </div>
                 </div>
             </div>
-        </div>
-        <script>
-            var app = new Vue({
-                el: '#app',
-                data: {
-                    password: '',
-                    isCorrect: false,
-                    intervalFinished: false,
-                },
-                methods: {
-                    submit() {
-                        if (this.password == 'Mufassal' || this.password == 'mufassal' || this.password == 'муфассал' || this.password == 'Муфассал' || this.password == '1') {
-                            this.isCorrect = true
-                            console.log('correct');
+            <script>
+                var app = new Vue({
+                    el: '#app',
+                    data: {
+                        password: '',
+                        isCorrect: false,
+                        intervalFinished: false,
+                    },
+                    methods: {
+                        submit() {
+                            if (this.password == 'Mufassal' || this.password == 'mufassal' || this.password == 'муфассал' || this.password == 'Муфассал' || this.password == '1') {
+                                this.isCorrect = true
+                                console.log('correct');
+                            }
                         }
-                    }
-                },
+                    },
 
-            })
-        </script>
+                })
+            </script>
 </body>
 
 </html>

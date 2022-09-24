@@ -16,9 +16,16 @@ body {
 }
 
 /* input style */
+.back__link{
+display: flex;
+align-items: flex-end;
+}
 .next{
-    
-    margin-bottom: 10px;
+    border: 1px;
+    height: 2rem;
+    width: 8rem;
+    border-radius: 15px;
+    margin: 25px auto;
 }
 .send {
     cursor: pointer;
